@@ -45,10 +45,6 @@ For any inquiries, please contact us at:
 *   School Website: [https://ciglisezaikarakoc.meb.k12.tr/](https://ciglisezaikarakoc.meb.k12.tr/)
 *   GitHub (Woffluon): [https://github.com/Woffluon](https://github.com/Woffluon)
 
-### License
-
-[MIT License](LICENSE) (If you want to use MIT License, create a LICENSE file in the root directory and mention it here. If you prefer no license, remove this section or state "No license").
-
 ---
 
 ## Türkçe <a name="türkçe"></a>
