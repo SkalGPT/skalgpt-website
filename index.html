@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html class="no-js js is-desktop" lang="tr">
+  <head>
+    <meta charset="UTF-8">
+    <title>SkalGPT</title>
+    <link rel="icon" href="./assets/images/favicon.png">
+    <link rel="stylesheet" href="./css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    </script>
+    <script defer src="./js/TweenLite.js"></script>
+    <script defer src="./js/three.r112.js"></script>
+    <script defer src="./js/index.js"></script>
+    <script async defer data-website-id="7ce2882a-e80f-49e3-af4d-9d3ebff40661" src="https://umami.sunguoqi.com/umami.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..144,400;700&family=Exo+2:wght@400;700&family=Manrope:wght@400;700&family=Sora:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Sora', sans-serif;
+        font-weight: 400;
+      }
+      .font-subheader {
+        font-family: 'Manrope', sans-serif;
+        font-weight: 700;
+      }
+      .font-header {
+        font-family: 'Bricolage Grotesque', sans-serif;
+        font-weight: 700;
+      }
+      .font-header-bold {
+        font-family: 'Exo 2', sans-serif;
+        font-weight: 700;
+      }
+      .font-bold {
+        font-family: 'Manrope', sans-serif;
+        font-weight: 700;
+      }
+      @media (max-width: 768px) {
+        #header-content {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+        #header-menu {
+          margin-top: 15px;
+          padding: 0;
+        }
+        #header-menu li {
+          display: block;
+          margin: 5px 0;
+        }
+        .hero-title {
+          font-size: 2em;
+        }
+        .hero-desc {
+          font-size: 1.2em;
+        }
+        .sec-title {
+          font-size: 1.8em;
+        }
+        .sec-desc {
+          font-size: 1em;
+        }
+        #featured-items-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .featured-item {
+          width: 90%;
+          margin-bottom: 20px;
+        }
+        .featured-item-image {
+          height: 300px !important;
+        }
+        .featured-item-context {
+          transform: translate(10px, 0vh) scale3d(1, 1, 1) !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header" class="font-subheader cache">
+      <div id="header-content">
+        <a aria-label="ana sayfa" id="header-logo" data-has-parsed="true"></a>
+        <ul id="header-menu" class="nav">
+          <li class="header-menu-item header-item">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div id="header-menu-btn"></div>
+    </header>
+    <canvas id="canvas"></canvas>
+    <div id="app">
+      <div id="main" data-scroll-tooltip="Başlamak için kaydırın">
+        <div id="main-scroll">
+          <div id="page-container">
+            <main id="about" class="page is-about" data-id="about" data-page-id="about" data-url="about"
+              data-title="SkalGPT">
+              <section id="about-hero" class="hero is-full">
+                <div id="about-hero-context" class="hero-context flex-vertical">
+                  <div class="hero-inner"
+                    style="transform: translate3d(0px, 0px, 0px); opacity: 1; visibility: visible;">
+                    <h1 id="about-hero-title" class="hero-title flex-vertical"
+                      style="visibility: visible;">
+                      SkalGPT ile tanışın
+                    </h1>
+                    <h4 id="about-hero-desc" class="hero-desc flex-vertical"
+                      style="visibility: visible;">
+                    </h4>
+                  </div>
+                </div>
+              </section>
+              <section id="about-blog" class="is-full margin-bottom-full">
+                <div id="about-blog-context" class="sec-context flex-vertical">
+                  <div class="sec-context-inner is-right darker-bg" style="opacity: 0;">
+                    <h3 id="about-blog-title" class="about-sec-title font-header"></h3>
+                    <h4 id="about-blog-subtitle" class="about-sec-subtitle font-header">Merhaba</h4>
+                    <div id="about-blog-desc" class="about-sec-desc">
+                      SkalGPT, metin anlama, dilsel analiz ve üretim yeteneklerinin yanı sıra matematiksel problemleri çözme ve verimli işlem yapma konularında da güçlüdür. Karmaşık dil yapılarını çözümleyebilirken, aynı zamanda sayısal verileri işleyebilir ve matematiksel hesaplamalar yapabilir. Bu sayede, dilsel görevlerin yanı sıra hesaplama ve optimizasyon gerektiren durumlarda da etkili çözümler sunar. SkalGPT, hem dilsel hem de matematiksel açıdan yüksek verimlilikle çalışarak, kullanıcılara hızlı ve doğru sonuçlar sağlar.
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section id="about-services" class="is-full">
+                <div id="about-services-context" class="sec-context flex-vertical">
+                  <div class="sec-context-inner is-right darker-bg" style="opacity: 0;">
+                    <h3 id="about-services-title" class="about-sec-subtitle">"Gelecek, insanın kendisini bulacağı yerdir."</h3>
+                    <h4 id="about-services-subtitle" class="about-sec-title font-header"></h4>
+                    <div id="about-services-items"></div>
+                    <div id="quote" style="position: relative; text-align: right; font-style: italic; margin-top: 20px;">
+                      <p>Sezai Karakoç</p>
+                      <p style="position: absolute; bottom: 0; right: 0; font-size: 12px; font-style: italic;"></p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <div class="is-full"></div>
+            </main>
+          </div>
+          <div id="featured">
+            <div id="featured-context" class="sec-context">
+              <div class="sec-context-inner">
+                <h3 id="featured-title" class="sec-title font-header split-line-up-effect">
+                  <div class="split-line" style="width: 1000px; height: 130px;">
+                    <div class="split-line-inner">Geleceğin Aynası
+                    </div>
+                  </div>
+                  <br>
+                </h3>
+                <div id="featured-desc" class="sec-desc font-bold split-line-up-effect"
+                  style="margin: 0 0 50px 0;">
+                  Yapay zeka, insanlığın yarattığı en güçlü aynadır. İçine baktığımızda, hem kendimizi hem de geleceğimizi daha net görebiliriz. Bu aynayı nasıl kullandığımız ise geleceğimizi şekillendirecek en önemli faktörlerden biri olacaktır.
+                </div>
+              </div>
+              <div id="featured-items-container" style="transform: skewY(0deg) translateZ(0px);">
+                <div class="featured-item" data-id="img-1" style="display: block;">
+                  <a class="featured-item-link" target="_blank"
+                    data-has-parsed="true">
+                    <div class="featured-item-image"
+                      style="border-radius: 25px; height: 505px; transform: translate(0px, 10vh) scale3d(1, 1.6, 1);background-image:url(./assets/images/webui.png);background-size: cover;background-position: center; ">
+                      <div class="featured-item-image-inner"></div>
+                    </div>
+                    <div class="featured-item-context is-white-content" data-base-color="#00f"
+                      data-has-parsed="true"
+                      style="transform: translate(20px, 0vh) scale3d(1.6, 1, 1);">
+                      <div class="featured-item-desc font-header-bold split-line-mask-effect">
+                        Yapay zekamızın kullanıcı arayüzü
+                      </div>
+                      <div class="featured-item-client split-line-mask-effect">
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8">
+                        <polygon
+                          points="6.767 0.603 6.767 5.897 0.871 0 0 0.872 5.894 6.767 0.605 6.767 0.605 8 8 8 8 0.603 6.767 0.603">
+                        </polygon>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="featured-item" data-id="img-2" style="display: block;">
+                  <a class="featured-item-link" target="_blank" href="https://huggingface.co/SkalGPT"
+                    data-has-parsed="true">
+                    <div class="featured-item-image"
+                      style="border-radius: 25px; height: 505px; transform: translate(0px, 10vh) scale3d(1, 1.6, 1);background-image:url(./assets/images/huggingface.png);background-size: cover;background-position: center;">
+                      <div class="featured-item-image-inner"></div>
+                    </div>
+                    <div class="featured-item-context is-white-content" data-base-color="#00f"
+                      data-has-parsed="true"
+                      style="transform: translate(20px, 0vh) scale3d(1.6, 1, 1);background:url() cover center">
+                      <div class="featured-item-desc font-header-bold split-line-mask-effect">
+                        SkalGPT'nin Huggingface sayfası
+                      </div>
+                      <div class="featured-item-client split-line-mask-effect">
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8">
+                        <polygon
+                          points="6.767 0.603 6.767 5.897 0.871 0 0.872 5.894 6.767 0.605 6.767 0.605 8 8 8 8 0.603 6.767 0.603">
+                        </polygon>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="featured-item" data-id="img-4" style="display: block;">
+                  <a class="featured-item-link" target="_blank"
+                    href="https://ciglisezaikarakoc.meb.k12.tr/" data-has-parsed="true">
+                    <div class="featured-item-image"
+                      style="border-radius: 25px; height: 505px; transform: translate(0px, 10vh) scale3d(1, 1.6, 1);background-image:url(./assets/images/okul.jpg);background-size: cover;background-position: center;">
+                      <div class="featured-item-image-inner"></div>
+                    </div>
+                    <div class="featured-item-context is-white-content" data-base-color="#00f"
+                      data-has-parsed="true"
+                      style="transform: translate(20px, 0vh) scale3d(1.6, 1, 1);">
+                      <div class="featured-item-desc font-header-bold split-line-mask-effect">
+                        Okulumuz
+                      </div>
+                      <div class="featured-item-client split-line-mask-effect">
+                        Sezai Karakoç Anadolu Lisesi
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8">
+                        <polygon
+                          points="6.767 0.603 6.767 5.897 0.871 0 0 0.872 5.894 6.767 0.605 6.767 0.605 8 8 8 8 0.603 6.767 0.603">
+                        </polygon>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+                <div class="featured-item" data-id="img-3" style="display: block;">
+                  <a class="featured-item-link" target="_blank"
+                    data-has-parsed="true">
+                    <div class="featured-item-image"
+                      style="border-radius: 25px; height: 505px; transform: translate(0px, 10vh) scale3d(1, 1.6, 1);background-image:url(./assets/images/about.png);background-size: cover;background-position: center;">
+                      <div class="featured-item-image-inner"></div>
+                    </div>
+                    <div class="featured-item-context is-white-content" data-base-color="#00f"
+                      data-has-parsed="true"
+                      style="transform: translate(20px, 0vh) scale3d(1.6, 1, 1);">
+                      <div class="featured-item-desc font-header-bold split-line-mask-effect">
+                        Modelimiz hakkında
+                      </div>
+                      <div class="featured-item-client split-line-mask-effect">
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8">
+                        <polygon
+                          points="6.767 0.603 6.767 5.897 0.871 0 0 0.872 5.894 6.767 0.605 6.767 0.605 8 8 8 8 0.603 6.767 0.603">
+                        </polygon>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="contact">
+            <div id="contact-main">
+              <div id="contact-context" class="sec-context flex-vertical">
+                <div class="sec-context-inner darker-bg is-left"
+                  style="transform: translate3d(0px, -505.8px, 0px); opacity: 0;">
+                  <h4 id="contact-title" class="font-header">Bize Ulaşın</h4>
+                  <div id="contact-columns">
+                    <div class="contact-column">
+                      <div class="contact-column-title font-bold"></div>
+                      <ul class="nav">
+                        </li><br>
+                        <li class="contact-column-item">
+                          <a href="mailto:skalgpt.official@gmail.com">skalgpt.official@gmail.com</a>
+                        </li>
+                        <br>
+                        <li class="contact-column-item">
+                          <a href="https://ciglisezaikarakoc.meb.k12.tr/">https://ciglisezaikarakoc.meb.k12.tr/</a>
+                        </li>
+                        <br>
+                        <li class="contact-column-item">
+                          <a href="https://github.com/Woffluon">
+                          https://github.com/Woffluon </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="clear-fix"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="main-scrollbar" style="display: block;">
+      <div id="main-scrollbar-indicator" style="height: 80.8985px; transform: translate3d(0px, 0px, 0px);"></div>
+    </div>
+    <div id="main-scroll-indicator" style="opacity: 1;">
+      <div id="main-scroll-indicator-text">Daha fazlasını görmek için kaydırın</div>
+      <div id="main-scroll-indicator-arrow-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="5" height="40" viewBox="0 0 5 40">
+          <path d="M0,40V0H1V35H5Z"></path>
+        </svg>
+      </div>
+    </div>
+    <a id="snd-btn" class="cache"></a>
+    <div id="preloader" class="cache" data-gesture="Başlamak için herhangi bir yere tıklayın">
+      <canvas id="preloader-canvas"></canvas>
+    </div>
+    <div id="cursor-follow" class="font-bold"></div>
+  </body>
+</html>
