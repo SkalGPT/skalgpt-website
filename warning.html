@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkalGPT - Mobil Bilgilendirme</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #13151a 0%, #1a1f2c 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 32px;
+            max-width: 90%;
+            width: 400px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .icon-container {
+            margin-bottom: 24px;
+        }
+
+        .icon {
+            font-size: 48px;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #94a3b8;
+            margin-bottom: 28px;
+            line-height: 1.7;
+        }
+
+        .device-icon {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 24px;
+            color: #64748b;
+        }
+
+        .device-icon i {
+            font-size: 24px;
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .highlight {
+            color: #3b82f6;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon-container">
+            <i class="fas fa-robot icon pulse"></i>
+        </div>
+        <h1>uyarı</h1>
+        <p>SkalGPT'nin web sitesi şu anda yalnızca <span class="highlight">masaüstü tarayıcılarda</span> kullanılabilmektedir. En iyi deneyim için lütfen bir masaüstü veya dizüstü bilgisayar kullanın.</p>
+        <div class="device-icon">
+            <i class="fas fa-laptop"></i>
+            <i class="fas fa-desktop"></i>
+        </div>
+    </div>
+</body>
+</html>
